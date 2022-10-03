@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "433147248971",
+    "firebase_url": "https://agrolixapp-default-rtdb.firebaseio.com",
+    "project_id": "agrolixapp",
+    "storage_bucket": "agrolixapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433147248971:android:4d5ded891e0c7beb4ee8ce",
+        "android_client_info": {
+          "package_name": "com.agrolixproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433147248971-2bs84gl9kodlpt3fr4akbcpuf301odjv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agrolixproject",
+            "certificate_hash": "e1b44678d64aa28fcdf2eaa52b3e93c9d5541158"
+          }
+        },
+        {
+          "client_id": "433147248971-6qcktte6d6iku79cb16lqjli9ba5rhtc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD_lzF1dq8jAviSPHfFcrquszj1-E6mMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433147248971-6qcktte6d6iku79cb16lqjli9ba5rhtc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
