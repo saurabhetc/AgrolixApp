@@ -21,6 +21,8 @@ import TabScreen from './App/Navigation/TabNavigation/TabScreen';
 import DetailedScreen from './App/Screen/DetailedScreen';
 import OtpLoginScreen from './App/Screen/OtpLoginScreen';
 import EnterPinNumber from './App/Screen/EnterPinNumber';
+import HomeScreenHindi from './App/Screen/HomeScreenHindi';
+
  const Stack = createNativeStackNavigator();
  
  const App =() => {
@@ -38,6 +40,7 @@ import EnterPinNumber from './App/Screen/EnterPinNumber';
       <Stack.Screen name="detailed" component={DetailedScreen}  options={{headerShown:false}}/>
       <Stack.Screen name="enpn" component={EnterPinNumber}  options={{headerShown:false}}/>
       <Stack.Screen name="otpls" component={OtpLoginScreen}  options={{headerShown:false}}/>
+      <Stack.Screen name="hshindi" component={HomeScreenHindi}  options={{headerShown:false}}/>
        </Stack.Navigator>
      </NavigationContainer>
    )

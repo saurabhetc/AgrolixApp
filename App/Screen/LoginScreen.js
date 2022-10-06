@@ -15,19 +15,19 @@ import auth from '@react-native-firebase/auth';
 import  AsyncStorage from '@react-native-async-storage/async-storage';
 import { COLORS, horizScale, SIZES, vertScale } from '../constans/theme';
 
-const LoginScreen = ({navigation}) => {
+const LoginScreen = ({navigation,props}) => {
 
  const[phone, setPhone] = useState(null);
  const [loading,setLoading] = useState(false)
-const[ ConfirmData, setConfirmData] = useState();
+const[ Confirm, setConfirm] = useState();
 
   const handleLogin = async () => {
     setLoading(true)
     try {
         const response = await auth().signInWithPhoneNumber( '+91'+phone);
-       navigation.navigate('otpls')
+       navigation.navigate('otpls',{xyz:response})
        ,{phone:response.phone}
-      setConfirmData(response)
+      setConfirm(response)
       console.log(response);
        //cache memory data store in mobile
       await AsyncStorage.setItem('ItemList',phone); 
@@ -80,7 +80,7 @@ const[ ConfirmData, setConfirmData] = useState();
         style={styles.loginBtn}
         onPress={() =>
               //navigation.navigate('otpls')
-            handleLogin()
+           handleLogin()
         // setLoading(true)
         }>
           {!loading ? (

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState,useRoute} from 'react';
 import {
   View,
   StyleSheet,
@@ -14,7 +14,9 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import { COLORS, horizScale, SIZES, vertScale } from '../constans/theme';
 // import { Customimages } from '../constans/Customimages';
 
-const OtpLoginScreen = ({navigation,props}) => {
+const OtpLoginScreen = ({navigation,route}) => {
+ // const { confirm } = props.route.params
+ // const route = useRoute();
   const [pin1, setPin1] = useState('');
   const [pin2, setPin2] = useState('');
   const [pin3, setPin3] = useState('');
@@ -41,11 +43,14 @@ const OtpLoginScreen = ({navigation,props}) => {
 
   const Clickbutton = async() => {
    //  setDisable(true);
-    setLoading(true);
+   console.log(route.params)
+;    setLoading(true);
     try {
        navigation.navigate('enpn');
-      const response = await ConfirmData.confirm(pin1,pin2,pin3,pin4,pin5,pin6);
-      console.log(response);
+      const response = await route.params.xyz.confirm(pin1,pin2,pin3,pin4,pin5,pin6);
+      
+      //setConfirmData(null)
+      // console.log(response);
       alert("your number is verified")
 
     } catch (err) {

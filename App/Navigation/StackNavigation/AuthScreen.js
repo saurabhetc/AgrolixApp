@@ -26,7 +26,7 @@ navigation.navigate('first');
       <View style={{marginTop:vertScale(50)}}>
       <Pressable
          onPress={() => {
-          setLanguage('hi')
+         navigation.navigate('hshindi')
       }}
           style={{
             backgroundColor:
